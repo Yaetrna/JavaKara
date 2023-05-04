@@ -1,3 +1,4 @@
+package externalJavaEasy;
 import javakara.JavaKaraProgram;
 
 public class KaraSpinToWin extends JavaKaraProgram {
