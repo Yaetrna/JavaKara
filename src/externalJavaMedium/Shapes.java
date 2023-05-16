@@ -42,16 +42,14 @@ public class Shapes extends JavaKaraProgram {
 		}
 	}
 	public void myProgram() {
-		while (true) {
-			world.clearAll();
-			this.topLeftTriangle();
-			world.clearAll();
-			this.bottomLeftTriangle();
-			world.clearAll();
-			this.bottomRightTriangle();
-			world.clearAll();
-			this.topRightTriangle();
-			world.clearAll();
-		}
+		world.clearAll();
+		this.topLeftTriangle();
+		world.clearAll();
+		this.bottomLeftTriangle();
+		world.clearAll();
+		this.bottomRightTriangle();
+		world.clearAll();
+		this.topRightTriangle();
+		world.clearAll();
 	}
 }
