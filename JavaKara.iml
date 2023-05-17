@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/javakara-x.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/javakara.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
