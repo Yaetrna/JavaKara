@@ -1,4 +1,4 @@
-package externalJavaEasy;
+package externalJavaHard;
 import javakara.JavaKaraProgram;
 public class QuickSort extends JavaKaraProgram {
 	int getNumber(int y) {
