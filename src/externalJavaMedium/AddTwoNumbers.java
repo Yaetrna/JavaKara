@@ -1,9 +1,9 @@
 package externalJavaMedium;
 import javakara.JavaKaraProgram;
 
-public class addTwoNumbers extends JavaKaraProgram {
+public class AddTwoNumbers extends JavaKaraProgram {
   public static void main(String[] args) {
-    new addTwoNumbers().run();
+    new AddTwoNumbers().run();
   }
 
   public void myMainProgram() {
