@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XmlWorld sizex="14" sizey="12" version="KaraX 1.0 javakara">
+    <XmlWallPoints/>
+    <XmlObstaclePoints/>
+    <XmlPaintedfieldPoints>
+        <XmlPoint type="0" x="6" y="11"/>
+        <XmlPoint type="0" x="6" y="10"/>
+        <XmlPoint type="0" x="5" y="11"/>
+        <XmlPoint type="0" x="5" y="10"/>
+        <XmlPoint type="0" x="5" y="9"/>
+        <XmlPoint type="0" x="5" y="8"/>
+        <XmlPoint type="0" x="5" y="7"/>
+        <XmlPoint type="0" x="5" y="6"/>
+        <XmlPoint type="0" x="5" y="5"/>
+        <XmlPoint type="0" x="3" y="11"/>
+        <XmlPoint type="0" x="3" y="10"/>
+        <XmlPoint type="0" x="3" y="9"/>
+        <XmlPoint type="0" x="3" y="8"/>
+        <XmlPoint type="0" x="3" y="7"/>
+        <XmlPoint type="0" x="2" y="11"/>
+        <XmlPoint type="0" x="2" y="10"/>
+        <XmlPoint type="0" x="2" y="9"/>
+        <XmlPoint type="0" x="2" y="8"/>
+        <XmlPoint type="0" x="2" y="7"/>
+        <XmlPoint type="0" x="1" y="7"/>
+        <XmlPoint type="0" x="1" y="6"/>
+        <XmlPoint type="0" x="2" y="6"/>
+        <XmlPoint type="0" x="2" y="5"/>
+        <XmlPoint type="0" x="1" y="5"/>
+        <XmlPoint type="0" x="1" y="4"/>
+        <XmlPoint type="0" x="1" y="8"/>
+        <XmlPoint type="0" x="1" y="9"/>
+        <XmlPoint type="0" x="1" y="10"/>
+        <XmlPoint type="0" x="1" y="11"/>
+        <XmlPoint type="0" x="0" y="11"/>
+        <XmlPoint type="0" x="0" y="10"/>
+        <XmlPoint type="0" x="0" y="9"/>
+        <XmlPoint type="0" x="0" y="8"/>
+        <XmlPoint type="0" x="0" y="7"/>
+        <XmlPoint type="0" x="0" y="6"/>
+        <XmlPoint type="0" x="4" y="11"/>
+        <XmlPoint type="0" x="4" y="10"/>
+        <XmlPoint type="0" x="4" y="9"/>
+        <XmlPoint type="0" x="4" y="8"/>
+        <XmlPoint type="0" x="4" y="7"/>
+        <XmlPoint type="0" x="4" y="6"/>
+        <XmlPoint type="0" x="4" y="5"/>
+        <XmlPoint type="0" x="4" y="4"/>
+        <XmlPoint type="0" x="4" y="3"/>
+        <XmlPoint type="0" x="4" y="2"/>
+        <XmlPoint type="0" x="6" y="9"/>
+        <XmlPoint type="0" x="0" y="5"/>
+        <XmlPoint type="0" x="0" y="4"/>
+        <XmlPoint type="0" x="0" y="3"/>
+        <XmlPoint type="0" x="0" y="2"/>
+        <XmlPoint type="0" x="2" y="4"/>
+        <XmlPoint type="0" x="2" y="3"/>
+    </XmlPaintedfieldPoints>
+    <XmlKaraList>
+        <XmlKara direction="0" name="Kara" x="7" y="11"/>
+    </XmlKaraList>
+    <XmlStreetList/>
+</XmlWorld>
