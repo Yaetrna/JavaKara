@@ -39,7 +39,7 @@ public class MirrorColumns extends JavaKaraProgram {
       kara.turnLeft();
       kara.turnLeft();
     } else {
-
+      
     }
   }
 }
