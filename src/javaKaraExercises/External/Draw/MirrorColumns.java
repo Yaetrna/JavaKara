@@ -4,42 +4,53 @@ import javakara.JavaKaraProgram;
 
 public class MirrorColumns extends JavaKaraProgram {
   public static void main(String[] args) {
-    new MirrorColumns().run("E:\\Development\\Projects\\Java\\JavaKara\\src\\worlds\\Columns.world");
+    new MirrorColumns().run("C:\\Users\\Yaetrna\\IdeaProjects\\JavaKara\\src\\worlds\\Columns.world");
   }
 
   public void myMainProgram() {
-    for (int columns = 1; columns <= this.getWidthOfColumns(); columns++) {
-      kara.turnLeft();
-      this.mirrorColumns(columns);
-    }
-  }
-  int getWidthOfColumns() {
+    int steps = 1;
     int counter = 0;
-    kara.turnLeft();
-    kara.move();
-    while (kara.onLeaf()) {
-      counter++;
-      kara.move();
+    while (kara.getPosition().x != 0) {
+      if (this.leafLeft(steps)) {
+        kara.putLeaf();
+        kara.move();
+        counter++;
+      } else {
+        this.turnAround();
+        for (int i = 0; i < counter; i++) {
+          kara.move();
+        }
+        counter = 0;
+        kara.turnLeft();
+        kara.move();
+        kara.turnLeft();
+        steps += 2;
+      }
     }
-    while (!kara.onLeaf()) {
-      kara.move();
-    }
-    kara.turnLeft();
-    kara.turnLeft();
-    kara.move();
-    kara.turnLeft();
-    return counter;
   }
-
-  void mirrorColumns(int distanceToNextColumn) {
-    for (int steps = 0; steps < distanceToNextColumn; steps++) {
+  boolean leafLeft(int steps) {
+    kara.turnLeft();
+    for (int i = 0; i < steps; i++) {
       kara.move();
     }
     if (kara.onLeaf()) {
-      kara.turnLeft();
-      kara.turnLeft();
+      this.karaReturn(steps);
+      return true;
     } else {
-      
+      this.karaReturn(steps);
+      return false;
     }
+  }
+  void turnAround() {
+    kara.turnLeft();
+    kara.turnLeft();
+  }
+
+  void karaReturn(int steps) {
+    this.turnAround();
+    for (int i = 0; i < steps; i++) {
+      kara.move();
+    }
+    kara.turnLeft();
   }
 }
