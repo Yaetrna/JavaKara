@@ -28,6 +28,7 @@ public class MirrorColumns extends JavaKaraProgram {
       }
     }
   }
+
   boolean leafLeft(int steps) {
     kara.turnLeft();
     for (int i = 0; i < steps; i++) {
@@ -41,6 +42,7 @@ public class MirrorColumns extends JavaKaraProgram {
       return false;
     }
   }
+
   void turnAround() {
     kara.turnLeft();
     kara.turnLeft();
