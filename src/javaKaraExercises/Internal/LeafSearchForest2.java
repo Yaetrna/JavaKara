@@ -1,4 +1,4 @@
-package javaKaraExercises.Internal.Search;
+package javaKaraExercises.Internal;
 import javakara.JavaKaraProgram;
 public class LeafSearchForest2 extends JavaKaraProgram {
 	void treeBypass() {

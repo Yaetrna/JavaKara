@@ -1,4 +1,4 @@
-package javaKaraExercises.Internal.Tunnel;
+package javaKaraExercises.Internal;
 import javakara.JavaKaraProgram;
 public class Tunnel2 extends JavaKaraProgram {
 	public void myProgram() {

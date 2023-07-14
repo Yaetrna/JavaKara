@@ -1,4 +1,4 @@
-package javaKaraExercises.External.Math;
+package javaKaraExercises.External;
 import javakara.JavaKaraProgram;
 public class NumberGuessing extends JavaKaraProgram {
 	void askRepeat() {

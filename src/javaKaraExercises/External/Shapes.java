@@ -1,4 +1,4 @@
-package javaKaraExercises.External.Draw;
+package javaKaraExercises.External;
 import javakara.JavaKaraProgram;
 
 public class Shapes extends JavaKaraProgram {

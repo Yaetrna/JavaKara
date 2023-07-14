@@ -1,9 +1,9 @@
-package javaKaraExercises.External.Spin;
+package javaKaraExercises.External;
 import javakara.JavaKaraProgram;
 
-public class SpinToWin2 extends JavaKaraProgram {
+public class SpinToWin3 extends JavaKaraProgram {
 	void spinBot() {
-		for (int i = 1; i <= 8; i++) {
+		for (int i = -1; i >= -8; i--) {
 			kara.move();
 			kara.turnRight();
 		}

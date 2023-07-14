@@ -1,4 +1,4 @@
-package javaKaraExercises.External.Spin;
+package javaKaraExercises.External;
 import javakara.JavaKaraProgram;
 
 public class SpinToWin extends JavaKaraProgram {
