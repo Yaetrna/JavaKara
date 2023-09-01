@@ -7,7 +7,6 @@ public class RecursiveLabyrinth extends JavaKaraProgram {
         String current_directory = System.getProperty("user.dir");
         String world_file_name = "RecursiveLabyrinth";
         current_directory += "\\src\\worlds\\"+world_file_name+".world";
-        System.out.println(current_directory);
         new RecursiveLabyrinth().run(current_directory);
     }
 
@@ -19,35 +18,35 @@ public class RecursiveLabyrinth extends JavaKaraProgram {
         tools.showMessage("Program has terminated. Time to Run: " + elapsedTimeMillis); //16379
     }
     void traverseLabyrinth(){
-    boolean noTreeFront = !kara.treeFront() && kara.treeRight() && kara.treeLeft();
+        boolean noTreeFront = !kara.treeFront() && kara.treeRight() && kara.treeLeft();
         if (noTreeFront) {
-        kara.move();
-        traverseLabyrinth();
-        kara.move();
-        return;
-    }
+            kara.move();
+            traverseLabyrinth();
+            kara.move();
+            return;
+        }
 
-    boolean noTreeRight = !kara.treeRight() && kara.treeLeft() && kara.treeFront();
+        boolean noTreeRight = !kara.treeRight() && kara.treeLeft() && kara.treeFront();
         if (noTreeRight) {
-        kara.turnRight();
-        kara.move();
-        traverseLabyrinth();
-        kara.move();
-        kara.turnLeft();
-        return;
-    }
+            kara.turnRight();
+            kara.move();
+            traverseLabyrinth();
+            kara.move();
+            kara.turnLeft();
+            return;
+        }
 
-    boolean noTreeLeft = !kara.treeLeft() && kara.treeRight() && kara.treeFront();
+        boolean noTreeLeft = !kara.treeLeft() && kara.treeRight() && kara.treeFront();
         if (noTreeLeft) {
-        kara.turnLeft();
-        kara.move();
-        traverseLabyrinth();
-        kara.move();
-        kara.turnRight();
-        return;
-    }
+            kara.turnLeft();
+            kara.move();
+            traverseLabyrinth();
+            kara.move();
+            kara.turnRight();
+            return;
+        }
         this.turn180Degrees();
-}
+    }
 
     void turn180Degrees() {
         kara.turnRight();
