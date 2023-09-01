@@ -3,12 +3,14 @@ package recursion;
 import javakara.JavaKaraProgram;
 
 public class recursiveLeafCollect extends JavaKaraProgram {
+
   private int recursiveCallCount = -1;
   private long startTime;
 
   public static void main(String[] args) {
     new recursiveLeafCollect().run();
   }
+
   public void myMainProgram() {
     this.createWorld();
     startTime = System.nanoTime();

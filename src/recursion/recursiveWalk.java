@@ -3,6 +3,7 @@ package recursion;
 import javakara.JavaKaraProgram;
 
 public class recursiveWalk extends JavaKaraProgram {
+
   private int recursiveCallCount = -1;
   private long startTime;
 
@@ -18,11 +19,11 @@ public class recursiveWalk extends JavaKaraProgram {
   }
 
   void start() {
-    if (!kara.treeFront()) {
-      if (kara.onLeaf()) {
-        kara.removeLeaf();
-      }
+    if (!kara.treeFront() && !kara.onLeaf()) {
       kara.move();
+      this.start();
+    } else if (kara.onLeaf()) {
+      kara.removeLeaf();
       this.start();
     } else {
       kara.turnLeft();
