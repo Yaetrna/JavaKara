@@ -29,7 +29,7 @@ public class recursiveLabyrinth extends JavaKaraProgram {
       kara.turnRight();
       this.start();
       kara.turnLeft();
-    } else if (kara.treeRight()){
+    } else if (kara.treeRight()) {
       kara.turnLeft();
       this.start();
       kara.turnRight();
