@@ -15,48 +15,43 @@ public class recursiveMaze extends JavaKaraProgram {
   }
 
   public void myMainProgram() {
-      int x;
-      int y;
-      do {
-        x = tools.random(30);
-        y = tools.random(20);
-      } while (world.isTree(x, y));
-      kara.setPosition(x, y);
-      startTime = System.nanoTime();
-      this.hyperX();
+    int x;
+    int y;
+    do {
+      x = tools.random(30);
+      y = tools.random(20);
+    } while (world.isTree(x, y));
+    kara.setPosition(x, y);
+    startTime = System.nanoTime();
+    this.start();
     printInformation();
   }
 
-  void hyperX() {
+  void start() {
+    if (!kara.treeFront()) {
+      kara.move();
+      this.start();
+    } else {
+      kara.turnLeft();
+      this.navigate();
+    }
+  }
+
+  void navigate() {
     if (!kara.onLeaf()) {
-      if (!kara.treeFront() && !kara.treeRight()) {
-        kara.move();
-        this.hyperX();
-      } else if (kara.treeRight()) {
-        this.logitech();
-        this.hyperX();
-      } else if (kara.treeFront()) {
+      if (!kara.treeRight()) {
         kara.turnRight();
+        kara.move();
+        this.navigate();
+      } else if (kara.treeFront()) {
+        kara.turnLeft();
+        this.navigate();
+      } else {
+        kara.move();
+        this.navigate();
       }
     }
     recursiveCallCount++;
-  }
-
-  void logitech() {
-    if (kara.treeRight() && !kara.treeFront()) {
-      kara.move();
-      this.logitech();
-    } else if (!kara.treeRight()) {
-      kara.turnRight();
-      kara.move();
-    } else if (kara.treeRight() && kara.treeLeft() && kara.treeFront()) {
-      kara.turnLeft();
-      kara.turnLeft();
-    } else if (kara.treeFront() && kara.treeLeft()) {
-      kara.turnRight();
-    } else if (kara.treeFront() && kara.treeRight()) {
-      kara.turnLeft();
-    }
   }
 
   void printInformation() {
