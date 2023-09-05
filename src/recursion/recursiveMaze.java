@@ -31,9 +31,11 @@ public class recursiveMaze extends JavaKaraProgram {
     if (!kara.treeFront()) {
       kara.move();
       this.start();
+      kara.move();
     } else {
       kara.turnLeft();
       this.navigate();
+      kara.turnRight();
     }
   }
 
@@ -43,13 +45,20 @@ public class recursiveMaze extends JavaKaraProgram {
         kara.turnRight();
         kara.move();
         this.navigate();
+        kara.move();
+        kara.turnLeft();
       } else if (kara.treeFront()) {
         kara.turnLeft();
         this.navigate();
+        kara.turnRight();
       } else {
         kara.move();
         this.navigate();
+        kara.move();
       }
+    } else {
+      kara.turnLeft();
+      kara.turnLeft();
     }
     recursiveCallCount++;
   }
