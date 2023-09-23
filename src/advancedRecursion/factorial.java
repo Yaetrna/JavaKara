@@ -12,7 +12,7 @@ public class factorial extends JavaKaraProgram {
 
     public void myMainProgram() {
         startTime = System.nanoTime();
-        System.out.println(this.start(0));
+        System.out.println(this.start(20));
         this.printInformation();
     }
 
@@ -23,6 +23,14 @@ public class factorial extends JavaKaraProgram {
         } else {
             return n * start(n - 1);
         }
+    }
+
+    long start_iterative(int n) {
+        long prod = 1;
+        for (int i = n; i > 1; i--) {
+            prod *= i;
+        }
+        return prod;
     }
 
     void printInformation() {

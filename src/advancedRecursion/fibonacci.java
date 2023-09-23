@@ -11,7 +11,7 @@ public class fibonacci extends JavaKaraProgram {
 
     public void myMainProgram() {
         startTime = System.nanoTime();
-        System.out.println(this.start(75));
+        System.out.println(this.start_iterative(55));
         this.printInformation();
     }
 
@@ -23,9 +23,20 @@ public class fibonacci extends JavaKaraProgram {
         }
     }
 
+    long start_iterative(int n) {
+        long a = 0;
+        long b = 1;
+        for (long x = 0; x < n; x++) {
+            long temp = a;
+            a = b;
+            b = temp + a;
+        }
+        return a;
+    }
+
     void printInformation() {
         long endTime = System.nanoTime();
-        long executionTime = (endTime - startTime) / 1000000;
-        tools.showMessage("Time: " + executionTime + "ms\n");
+        long executionTime = (endTime - startTime);
+        tools.showMessage("Time: " + executionTime + "ns\n");
     }
 }
