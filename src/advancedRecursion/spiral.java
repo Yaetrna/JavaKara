@@ -15,7 +15,7 @@ public class spiral extends JavaKaraProgram {
     }
 
     void start(int n, boolean leaf) {
-        if (n > 99) {
+        if (n > 249) {
             kara.turnLeft();
             kara.turnLeft();
         } else {
