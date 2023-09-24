@@ -4,18 +4,16 @@ import javakara.JavaKaraProgram;
 
 public class spiral extends JavaKaraProgram {
 
-    public static void main(String[] args) {
-        new spiral().run();
-    }
+    public static void main(String[] args) {}
 
     public void myMainProgram() {
-        world.setSize(500, 500);
-        kara.setPosition(250, 250);
+        world.setSize(50, 50);
+        kara.setPosition(25, 25);
         this.start(1, true);
     }
 
     void start(int n, boolean leaf) {
-        if (n > 249) {
+        if (n > 25) {
             kara.turnLeft();
             kara.turnLeft();
         } else {
