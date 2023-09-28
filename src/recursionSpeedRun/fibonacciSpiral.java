@@ -9,8 +9,8 @@ public class fibonacciSpiral extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        world.setSize(100, 100);
-        kara.setPosition(50, 50);
+        world.setSize(50, 59);
+        kara.setPosition(25, 25);
         this.fibonacciSpiral();
     }
 

@@ -9,7 +9,10 @@ public class moveX extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        this.moveX(10);
+        kara.setPosition(0, 0);
+        world.setSize(25, 1);
+        tools.sleep(5000);
+        this.moveX(25);
     }
 
     void moveX(int n) {

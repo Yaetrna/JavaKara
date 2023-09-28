@@ -9,7 +9,7 @@ public class factorial extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        this.factorial(10);
+        System.out.println(this.factorial(10));
     }
 
     int factorial(int n) {

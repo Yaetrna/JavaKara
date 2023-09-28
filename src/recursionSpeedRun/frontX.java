@@ -9,11 +9,15 @@ public class frontX extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        this.frontX(10, true);
+        kara.setPosition(0, 0);
+        world.setSize(25, 1);
+        tools.sleep(5000);
+        this.frontX(25, true);
     }
 
     void frontX(int n, boolean leaf) {
         if (n > 0) {
+            // Check is here so that the program works with leaf == false
             if (leaf) {
                 kara.putLeaf();
             }

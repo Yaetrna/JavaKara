@@ -9,7 +9,7 @@ public class power extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        this.power(2, 10);
+        System.out.println(power(2, 10));
     }
 
     int power(int base, int exponent) {

@@ -9,7 +9,7 @@ public class fibonacciPlacer extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        world.setSize(50, 50);
+        world.setSize(1000, 16);
         kara.setPosition(0, 0);
         this.fibonacciPlacer();
     }
@@ -42,7 +42,7 @@ public class fibonacciPlacer extends JavaKaraProgram {
     }
 
     void fibonacciPlacer() {
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i < 17; i++) {
             int x = this.fibonacci(i);
             this.frontX(x, true);
             kara.turnLeft();

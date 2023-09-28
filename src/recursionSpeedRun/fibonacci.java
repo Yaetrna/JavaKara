@@ -9,7 +9,7 @@ public class fibonacci extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        this.fibonacci(10);
+        System.out.println(this.fibonacci(10));
     }
 
     int fibonacci(int n) {
