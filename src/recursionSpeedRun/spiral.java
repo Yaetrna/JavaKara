@@ -11,8 +11,8 @@ public class spiral extends JavaKaraProgram {
     public void myMainProgram() {
         world.setSize(25, 25);
         kara.setPosition(12, 12);
-        tools.sleep(5000);
-        this.spiral();
+        tools.sleep(2000);
+        this.spiral(1);
     }
 
     void frontX(int n, boolean leaf) {
@@ -25,10 +25,15 @@ public class spiral extends JavaKaraProgram {
         }
     }
 
-    void spiral() {
-        for (int i = 0; i < 26; i++) {
+    void spiral(int n) {
+        for (int i = 0; i < 10; i++) {
             this.frontX(i, true);
             kara.turnLeft();
         }
+        /*kara.turnLeft();
+        for (int i = 9; i > 0; i--) {
+            this.frontX(i, false);
+            kara.turnRight();
+        }*/
     }
 }

@@ -16,7 +16,9 @@ public class fibonacci extends JavaKaraProgram {
     }
 
     long start(int n) {
-        if (n < 3) {
+        if (n < 1) {
+            return 0;
+        } else if (n < 3) {
             return 1;
         } else {
             return start(n - 1) + start(n - 2);
