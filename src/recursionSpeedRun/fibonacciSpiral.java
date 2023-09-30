@@ -11,7 +11,7 @@ public class fibonacciSpiral extends JavaKaraProgram {
     public void myMainProgram() {
         world.setSize(50, 59);
         kara.setPosition(25, 25);
-        this.fibonacciSpiral();
+        this.fibonacciSpiral(1);
     }
 
     int fibonacci(int n) {
@@ -34,11 +34,12 @@ public class fibonacciSpiral extends JavaKaraProgram {
         }
     }
 
-    void fibonacciSpiral() {
-        for (int i = 1; i < 10; i++) {
-            int x = this.fibonacci(i);
+    void fibonacciSpiral(int n) {
+        if (n < 10) {
+            int x = this.fibonacci(n);
             this.frontX(x, true);
             kara.turnLeft();
+            this.fibonacciSpiral(n + 1);
         }
     }
 }
