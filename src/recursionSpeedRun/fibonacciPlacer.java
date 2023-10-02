@@ -44,7 +44,7 @@ public class fibonacciPlacer extends JavaKaraProgram {
     void fibonacciPlacer(int n) {
         if (n < 17) {
             int x = this.fibonacci(n);
-            this.frontX(x, true);
+            this.frontX(x / 2, true);
             kara.turnLeft();
             kara.turnLeft();
             this.moveX(x);

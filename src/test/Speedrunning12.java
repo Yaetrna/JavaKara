@@ -2,14 +2,6 @@ package test;
 
 import javakara.JavaKaraProgram;
 
-/**
- *
-
- description*
- @version 1.0 from 27.09.2023
- @author
- */
-
 public class Speedrunning12 extends JavaKaraProgram {
 
     public static void main(String[] args) {
@@ -17,10 +9,9 @@ public class Speedrunning12 extends JavaKaraProgram {
     }
 
     public void myMainProgram() {
-        world.setSize(100, 100);
+        world.setSize(10, 100);
         kara.setPosition(0, 99);
-        int worldSizeY = world.getSizeY();
-        this.putLeaves(worldSizeY);
+        this.putLeaves(world.getSizeY());
     }
 
     void turnAround() {
@@ -34,6 +25,8 @@ public class Speedrunning12 extends JavaKaraProgram {
             return 0;
         } else if (n < 2) {
             return 1;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
         }
         Would be slightly better as it does not violate the DRY principle.
         DRY = Do Not Repeat yourself.
@@ -48,26 +41,24 @@ public class Speedrunning12 extends JavaKaraProgram {
     }
 
     void putLeaves(int y) {
-        for (int longer = 1; longer < y; longer++) {
+        for (int x = 1; x < y; x++) {
             kara.turnLeft();
-            if (fibonacci(longer) <= 100) {
-                for (int detour = 0; detour<= fibonacci(longer); detour++) {
+            if (fibonacci(x) < (world.getSizeY() + world.getSizeX()) / 2) {
+                for (int detour = 0; detour < fibonacci(x); detour++) {
                     kara.putLeaf();
-                    if(!kara.treeFront()) {
-                        kara.move();
-                    } else {
-                        this.turnAround();
-                        break;
-                    }
-                }
-                this.turnAround();
-                while (kara.onLeaf()) {
                     kara.move();
                 }
-                this.turnAround();
-                kara.move();
-                kara.turnRight();
-                kara.move();
+                if (kara.onLeaf()) {
+                    kara.move();
+                } else {
+                    kara.move();
+                    this.turnAround();
+                    kara.move();
+                    kara.turnLeft();
+                    kara.move();
+                }
+            } else {
+                return;
             }
         }
     }
