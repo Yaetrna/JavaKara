@@ -15,7 +15,7 @@ public class fibonacci extends JavaKaraProgram {
     int fibonacci(int n) {
         if (n < 1) {
             return 0;
-        } else if (n < 2) {
+        } else if (n < 3) {
             return 1;
         } else {
             return this.fibonacci(n - 1) + this.fibonacci(n - 2);
